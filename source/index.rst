@@ -10,7 +10,12 @@ Welcome to Sphinx-ReadTheDocs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   docs/Introduction.md
+   docs/Environment.md
+   docs/Git-Build.md
+   docs/Travis-Setting.md
+   docs/Travis-Build.md
+   docs/GitHub-Pages.md
 
 Indices and tables
 ==================
