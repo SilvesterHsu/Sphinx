@@ -23,6 +23,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   name: $GIT_NAME
   email: $GIT_EMAIL
-  local_dir: site
+  local_dir: build/html
   on:
     branch: master
