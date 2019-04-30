@@ -1,0 +1,28 @@
+language: python
+
+python:
+  - 3.6
+
+before_install:
+  - export TZ='Asia/Shanghai'
+
+install:
+  - pip install sphinx sphinx-autobuild sphinx_rtd_theme
+  - pip install recommonmark
+
+script:
+  - make html
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  name: $GIT_NAME
+  email: $GIT_EMAIL
+  local_dir: site
+  on:
+    branch: master
