@@ -7,7 +7,9 @@ before_install:
   - export TZ='Asia/Shanghai'
 
 install:
-  - pip install sphinx sphinx-autobuild sphinx_rtd_theme
+  - pip install sphinx
+  - pip install sphinx-autobuild
+  - pip install sphinx_rtd_theme
   - pip install recommonmark
 
 script:
