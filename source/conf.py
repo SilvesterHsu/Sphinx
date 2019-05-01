@@ -17,6 +17,10 @@
 
 # -- Project information -----------------------------------------------------
 
+from recommonmark.transform import AutoStructify
+import recommonmark
+from recommonmark.parser import CommonMarkParser
+import sphinx_rtd_theme
 project = 'Sphinx-ReadTheDocs'
 copyright = '2019, seel'
 author = 'seel'
@@ -48,29 +52,27 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
-import sphinx_rtd_theme
 html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-from recommonmark.parser import CommonMarkParser
 source_parsers = {
     '.md': CommonMarkParser,
 }
 source_suffix = ['.rst', '.md']
 
 # At top on conf.py (with other import statements)
-import recommonmark
-from recommonmark.transform import AutoStructify
 
 # At the bottom of conf.py
+
+
 def setup(app):
     app.add_config_value('recommonmark_config', {
-            'url_resolver': lambda url: github_doc_root + url,
-            'auto_toc_tree_section': 'Contents',
-            }, True)
+        'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+    }, True)
     app.add_transform(AutoStructify)
