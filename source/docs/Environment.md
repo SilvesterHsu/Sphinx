@@ -24,7 +24,7 @@ markdown-preview-enhanced
 markdown-table-editor
 ```
 
-![Environment-01](img/Environment-01.jpg)
+![](img/Environment-01.jpg)
 
 ## Python packages
 Install the `sphinx` and `theme` package using pip:

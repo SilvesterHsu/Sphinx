@@ -1,4 +1,5 @@
 # Introduction
+
 Sphinx is a powerful documentation generator that has many great features for writing technical documentation including:
 
 * Generate web pages, printable PDFs, documents for e-readers (ePub), and more all from the same sources
@@ -7,4 +8,4 @@ Sphinx is a powerful documentation generator that has many great features for wr
 * Syntax highlighted code samples
 * A vibrant ecosystem of first and third-party [extensions](http://www.sphinx-doc.org/en/master/usage/extensions/index.html#builtin-sphinx-extensions)
 
-![Introduction](img/Introduction.jpg)
+![](img/Introduction.jpg)

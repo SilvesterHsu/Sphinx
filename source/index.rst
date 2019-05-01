@@ -16,6 +16,7 @@ Welcome to Sphinx-ReadTheDocs's documentation!
    docs/Travis-Setting.md
    docs/Travis-Build.md
    docs/GitHub-Pages.md
+   docs/Math-Support.md
 
 Indices and tables
 ==================

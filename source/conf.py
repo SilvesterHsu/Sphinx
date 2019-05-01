@@ -14,7 +14,16 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import sys, os
 
+sys.path.append(os.path.abspath('sphinxext'))
+
+extensions = [
+    'recommonmark',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.mathjax',
+]
 # -- Project information -----------------------------------------------------
 
 from recommonmark.transform import AutoStructify
@@ -53,7 +62,7 @@ exclude_patterns = []
 #
 # html_theme = 'alabaster'
 html_theme = "sphinx_rtd_theme"
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -70,9 +79,17 @@ source_suffix = ['.rst', '.md']
 # At the bottom of conf.py
 
 
+#def setup(app):
+#    app.add_config_value('recommonmark_config', {
+#        'url_resolver': lambda url: github_doc_root + url,
+#        'auto_toc_tree_section': 'Contents',
+#    }, True)
+#    app.add_transform(AutoStructify)
+
+github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 def setup(app):
     app.add_config_value('recommonmark_config', {
-        'url_resolver': lambda url: github_doc_root + url,
-        'auto_toc_tree_section': 'Contents',
-    }, True)
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
     app.add_transform(AutoStructify)

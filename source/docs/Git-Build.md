@@ -21,7 +21,8 @@ sphinx-quickstart
 ```
 
 There's a single configuration file named `index.rst`, and a folder named `source` that will contain your documentation source files.
-![Git-Build-03](img/Git-Build-03.jpg)
+
+![](img/Git-Build-03.jpg)
 
 **Change theme `sphinx_rtd_theme`**
 Change `source/conf.py`:
@@ -37,7 +38,7 @@ make html
 ```
 
 Go to the `build/html` directory and open `index.html` with your browser.
-![Git-Build-04](img/Git-Build-04.jpg)
+![](img/Git-Build-04.jpg)
 
 **Markdown Support**
 By installing `recommonmark` to support markdown
@@ -63,10 +64,10 @@ git commit -m "Basic Sphinx files"
 ## GitHub Tocken
 We need `GITHUB_TOKEN` for Travis to build Mkdocs. So we generate one in [Personal access tokens](https://github.com/settings/tokens).(or you can go `Settings -> Developer settings -> Personal access tokens` to generate one).
 
-![Git-Build-01](img/Git-Build-01.jpg)
+![](img/Git-Build-01.jpg)
 
 And make sure click every selection.
 
-![Git-Build-02](img/Git-Build-02.png)
+![](img/Git-Build-02.png)
 
 Copy the token we generated for later use.

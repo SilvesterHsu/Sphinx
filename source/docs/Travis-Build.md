@@ -14,17 +14,15 @@ nano .travis.yml
 language: python
 
 python:
-  - 3.6
-
-before_install:
-  - export TZ='Asia/Shanghai'
+  - '3.6'
 
 install:
-  - pip install sphinx sphinx-autobuild sphinx_rtd_theme
-  - pip install recommonmark
+  - pip install -U pip
+  - pip install -r requirements.txt
 
 script:
   - make html
+  - touch build/html/.nojekyll
 
 branches:
   only:
@@ -36,11 +34,21 @@ deploy:
   github_token: $GITHUB_TOKEN
   name: $GIT_NAME
   email: $GIT_EMAIL
-  local_dir: site
+  local_dir: build/html
   on:
     branch: master
-
 ```
+
+Must add `touch build/html/.nojekyll`, telling GitHub not to use jekyll to compile the docs
+
+requirements file:
+```
+sphinx
+sphinx-autobuild
+sphinx-rtd-theme
+recommonmark
+```
+
 
 ## Project Upload
 After generating the travis setting file, we need to push it on GitHub.
@@ -55,4 +63,4 @@ Enter our repository in [Travis](https://travis-ci.org/) and build our repositor
 It will use our setting file `.travis.yml` to build the Mkdocs website.
 If everything goes well, it should be in green.
 
-![Travis-Build-01](img/Travis-Build-01.jpg)
+![](img/Travis-Build-01.jpg)

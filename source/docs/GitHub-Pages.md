@@ -6,6 +6,6 @@ GitHub provides [GitHub Pages](https://pages.github.com/) services for all repos
 3. scroll down to find 'GitHub Pages'
 4. check whether source `gh-pages branch`
 
-![GitHub-Pages-01](img/GitHub-Pages-01.jpg)
+![](img/GitHub-Pages-01.jpg)
 
 Enjoy write your own notes or manual.
