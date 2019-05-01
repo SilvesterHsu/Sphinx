@@ -5,9 +5,9 @@ python:
 
 install:
   - pip install -U pip
-  - pip install sphinx
+  - pip install Sphinx
   - pip install sphinx-autobuild
-  - pip install sphinx_rtd_theme
+  - pip install sphinx-rtd-theme
   - pip install recommonmark
   - pip install sphinxcontrib-mermaid
 
