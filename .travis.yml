@@ -9,6 +9,7 @@ install:
 
 script:
   - make html
+  - touch build/html/.nojekyll
 
 branches:
   only:
